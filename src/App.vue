@@ -1,28 +1,25 @@
+<!--
+  功能：封装好的将展示项目初始的控制初始路由的组件和路由切换视图
+  实现：将封装好的控制整个大项目组件的下方导航列表导入，
+        并写上路由所展示的组件展示标签
+-->
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view/>
+    <main-tab-bar/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  import MainTabBar from './components/content/mainTabbar/MainTabBar'
+  export default {
+    name: 'App',
+    components: {
+      MainTabBar
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import './assets/css/base.css';
 </style>
